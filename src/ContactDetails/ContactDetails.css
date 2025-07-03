@@ -1,0 +1,21 @@
+.contact-details{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+
+}
+.info-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details-image {
+    display: flex;
+    align-items: self-start;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50px;
+
+}

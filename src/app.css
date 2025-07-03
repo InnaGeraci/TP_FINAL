@@ -1,0 +1,36 @@
+
+body{
+    background-color: antiquewhite;
+}
+.banner{
+    display: flex;
+    background-color: rgb(206, 157, 233);
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 10px;
+
+}
+.title-link{
+    color: wheat;;
+    text-decoration:none ;
+}
+.banner_image{
+    display: flex;
+    width: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.title{
+    color: wheat;
+    text-decoration: none;
+}
+.banner_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner_title p{
+    font-style: italic;
+}

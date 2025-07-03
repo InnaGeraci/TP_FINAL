@@ -1,0 +1,57 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(184, 182, 182);
+    gap: 15px;
+    margin: 10px;
+    text-decoration: overline black;
+    border: 1px black;
+}
+
+.last-connection {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+
+}
+
+.last-message {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    max-width: 200px;
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .contact-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-card h2 {
+        font-size: 18px;
+    }
+
+    .contact-card p {
+        font-size: 12px;
+    }
+}
