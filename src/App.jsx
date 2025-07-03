@@ -4,7 +4,7 @@ import ContactList from './Contacts/ContactList';
 import ContactDetails from "./ContactDetails/ContactDetails"
 import ChatSection from "./Chat/ChatSection"
 import React from "react";
-import contacts from './Contacts/Contacts';
+import contacts from './Contacts/contacts';
 import "./app.css"
 
 
