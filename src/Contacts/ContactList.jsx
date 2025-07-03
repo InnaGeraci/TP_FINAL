@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ContactCard from "./ContactCard";
-import contacts from "./Contacts";
+import contacts from "./contacts";
 import MessagesContext from "../MessagesContext/MessagesContext";
 
 const ContactList = () => {

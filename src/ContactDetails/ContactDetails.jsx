@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import contacts from "../Contacts/Contacts";
+import contacts from "../Contacts/contacts";
 import "./ContactDetails.css";
 
 const ContactDetails = () => {

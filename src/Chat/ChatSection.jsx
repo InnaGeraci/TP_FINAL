@@ -1,4 +1,4 @@
-import contacts from "../Contacts/Contacts";
+import contacts from "../Contacts/contacts";
 import React, { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import MessagesContext from "../MessagesContext/MessagesContext";
