@@ -4,7 +4,6 @@ import { useParams, Link } from "react-router-dom";
 import MessagesContext from "../MessagesContext/MessagesContext";
 import "./ChatSection.css"
 
-
 const ChatSection = () => {
     const { contactId } = useParams();
     const contact = contacts.find((c) => c.id === contactId);
@@ -41,7 +40,7 @@ const ChatSection = () => {
                 sender: "contact",
                 text: contact.answer,
                 time: "07:46",
-                seen: false,
+                seen: true,
             };
             addMessage(contactId, autoReply);
             setMessageId((prev) => prev + 1);
@@ -61,25 +60,36 @@ const ChatSection = () => {
                 <h2 className="chat-header-name">{contact.name}</h2>
             </div>
             <div className="messages-container">
-                {messages.map((msg) =>
-                    msg.sender === "Me" ? (
-                        <div key={msg.id} className="my-message">
-                            <p>{msg.text}</p>
-                            <div className="info">
-                                <span className="time">{msg.time}</span>
-                                <span className="tick">✓✓</span>
+                {messages.map((msg) => {
+                    let tick;
+                    if (msg.seen) {
+                        tick = "✓✓";
+                    } else {
+                        tick = "✓";
+                    }
+
+                    if (msg.sender === "Me") {
+                        return (
+                            <div key={msg.id} className="my-message">
+                                <p>{msg.text}</p>
+                                <div className="info">
+                                    <span className="time">{msg.time}</span>
+                                    <span className="tick">{tick}</span>
+                                </div>
                             </div>
-                        </div>
-                    ) : (
-                        <div key={msg.id} className="contact-message">
-                            <p>{msg.text}</p>
-                            <div className="info-contact">
-                                <span className="time">{msg.time}</span>
-                                <span className="tick">✓</span>
+                        );
+                    } else {
+                        return (
+                            <div key={msg.id} className="contact-message">
+                                <p>{msg.text}</p>
+                                <div className="info-contact">
+                                    <span className="time">{msg.time}</span>
+                                    <span className="tick">✓✓</span>
+                                </div>
                             </div>
-                        </div>
-                    )
-                )}
+                        );
+                    }
+                })}
             </div>
 
             <input
@@ -89,7 +99,7 @@ const ChatSection = () => {
                 placeholder="Write Here..."
             />
             <button className="send-button" onClick={sendMessage}>
-                Send Mew-ssage!
+                Send Meow-ssage!
             </button>
         </div>
     );

@@ -1,73 +1,91 @@
-* {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
 .contact-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 16px;
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-sizing: border-box;
 }
 
-.contact-card:hover {
-    background-color: #d7d7d7;
-
+.contact-info {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  text-align: left;
+  gap: 4px;
 }
-
 .contact-image {
-    display: flex;
-    align-items: self-start;
-    width: 40px;
-    object-fit: cover;
-    border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name-slogan-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  text-align: left;
+  align-items: center;
+  gap: 4px; 
+  max-width: 80%; 
+}
+.name-slogan-container h2{
+  color: black;
+}
+link{
+  text-decoration: none;
 
 }
 
-.contact-information {
-    display: flex;
-    flex-direction: column;
-    
-}
-.contact-information{
-    text-decoration: none;
-}
-
-
-.contact-name {
-    white-space: nowrap;
-    font-size: 12px;
-    font-weight: 10px;
-}
-
-.contact-name-link {
-    color: black;
-    text-decoration: none;
-}
 
 .contact-slogan {
-    font-size: 10px;
-    white-space: nowrap;
-    text-decoration: none;
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;  
 }
-.sloganClass
 
-.contact-number {
-    font-size: 10px;
-    font-weight: 10px;
+.last-message-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
-.lastMessageClass{
-    display: flex;
-    align-items: center;
+
+.last-message-time p {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  margin: 0;
 }
-.last-connection{
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
+
+.last-connection {
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        width: 300px;
+        padding: 16px;
+    }
+
+    .contact-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-card h2 {
+        font-size: 18px;
+    }
+
+    .contact-card p {
+        font-size: 12px;
+    }
 }
