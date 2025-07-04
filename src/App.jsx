@@ -22,7 +22,7 @@ function App() {
                     <p>We cats are more than happy to help — just say the word, human!</p>
                 </div>
                 <div >
-                    <img className='banner_image' src="assets/catpaw.png" alt="image_banner" />
+                    <img className='banner_image' src="/assets/catpaw.png" alt="image_banner" />
                 </div>
             </div>
             <Routes>
