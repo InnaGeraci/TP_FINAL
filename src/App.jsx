@@ -19,7 +19,7 @@ function App() {
                     <Link to="/" className="title-link">
                         <h1>WhatsMeow</h1>
                     </Link>
-                    <p>We cats are more than happy to help — just say the word, human!</p>
+                    <p>We cats are more than happy to help you! Just say the word, human!</p>
                 </div>
                 <div >
                     <img className='banner_image' src="/assets/catpaw.png" alt="image_banner" />
