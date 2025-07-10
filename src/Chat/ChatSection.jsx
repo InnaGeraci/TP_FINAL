@@ -91,7 +91,12 @@ const ChatSection = () => {
                     }
                 })}
             </div>
-
+<form
+    onSubmit={(e) => {
+        e.preventDefault(); 
+        sendMessage();
+    }}
+    className="message-form">
             <input
                 type="text"
                 value={newText}
@@ -101,6 +106,7 @@ const ChatSection = () => {
             <button className="send-button" onClick={sendMessage}>
                 Send Meow-ssage!
             </button>
+            </form>
         </div>
     );
 };
